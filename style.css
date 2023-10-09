@@ -35,17 +35,40 @@ body{
     width: 100%;
     /* max-width: 3030px; */
     height: 900px;
-    background: linear-gradient(180deg, #13112D 0%, rgba(34, 31, 62, 0.67) 100%), url(./images/unsplash_IlUq1ruyv0Q.png);
+    position: relative;
+    background: linear-gradient(180deg, #13112D 0%, rgba(34, 31, 62, 0.67) 100%);
+    
+    /* opacity: 0.4; */
+    
+    padding: 50px 100px;
+}   
+.container::before{
+    content: "";
+    background: url(./images/unsplash_IlUq1ruyv0Q.png);
+    top: 10%;
+    left: 20%;
+    position: absolute;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 100px;
-}   
-                                        /*---------- NAVIGATION ------------ */
-nav{
+    width: 700px;
+    height: 800px;
+    filter: blur(3.5px);
+    z-index: -1;
+}
+
+                        /*---------- NAVIGATION ------------ */
+header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+nav{
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 150px; */
 }
 .logo{
     display: flex;
@@ -55,7 +78,7 @@ nav{
 .navbar{
     display: flex;
     align-items: center;
-    gap: 150px;
+    gap: 100px;
     justify-content: space-between;
 }
 .navbar-mobile{
@@ -63,7 +86,7 @@ nav{
 }
 nav ul{
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 nav ul li{
     list-style-type: none;
@@ -93,8 +116,8 @@ nav ul li{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 140px;
-    height: 50px;
+    width: 180px;
+    height: 70px;
     /* padding: 25px 60px; */
     border: 2.5px solid #EF195F;
     border-radius: 10px;
@@ -128,13 +151,16 @@ nav ul li{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 500px;
+    width: 680px;
 }
 .content-text h1{
     font-family: 'Aldrich', sans-serif;
     color: #fff;
     font-size: 50px;
     line-height: 60px;
+}
+.content-text h1 > span{
+    color: #EF195F;
 }
 .content-text p {
     font-family: 'DM Sans', sans-serif;
@@ -144,10 +170,10 @@ nav ul li{
 }
 .content-image img{
     position: absolute;
-    top: 23.5%;
-    left: 30%;
+    top: -220px;
+    left: 37%;
     width: 800px;
-    height: 100%;
+    height: 800px;
 }
 .content-buttons{
     display: flex;
@@ -191,6 +217,7 @@ main{
 .section-2{
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 150px;
@@ -206,7 +233,7 @@ main{
     color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
 }
 .metaverse-header h1{
@@ -264,7 +291,7 @@ main{
     align-items: center;
     gap: 35px;
     margin-top: 70px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 .offer-box{
     width: 338px;
@@ -276,8 +303,7 @@ main{
     border: 2px solid rgba(239, 25, 95, 0.3);
     color: #fff;
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(89, 81, 175, 0) 0%, #12101C 100%),
-    linear-gradient(0deg, rgba(239, 25, 95, 0.3), rgba(239, 25, 95, 0.3));
+    background: linear-gradient(180deg, rgba(89, 81, 175, 0) 0%, #12101C 60%);
 }
 .offer-icon img{
     width: 100px;
@@ -309,6 +335,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
 }
 .application{
     width: 1200px;
@@ -330,12 +357,13 @@ main{
 .technologies{
     /* width: 1000px; */
     background: #171523;
+    border-radius: 12px;
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 70px;
+    gap: 80px;
     margin-top: 80px;
 }
 .technology{
@@ -347,7 +375,7 @@ main{
     width: 420px;
 }
 .technology-content{
-    width: 400px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -373,19 +401,23 @@ main{
     justify-content: center;
 }
 .completed-projects{
+    position: relative;
     width: 1200px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
+.completed-projects > img{
+    width: 520px;
+    height: 450px;
+    position: absolute;
+    top: -50px;
+}
 .projects-header{
-    background-image: url(./images/Ellipse\ 72.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: -1;
-    width: 540px;
+    width: 580px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -427,7 +459,7 @@ main{
     width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 30px;
     color: #DADADA;
@@ -461,7 +493,7 @@ main{
 }
 .blog{
     width: 338px;
-    height: 550px;
+    height: 490px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -469,13 +501,12 @@ main{
     border-radius: 12px;
     margin: 0;
     color: #fff;
-    /* border-radius: 10px; */
-    background: linear-gradient(180deg, rgba(89, 81, 175, 0) 0%, #2e2944 100%),
-        ;
+    background: linear-gradient(180deg, rgba(89, 81, 175, 0) 0%, #12101C 45%);
 }
 .blog-image img{
-    width: 338px;
-    height:230px;
+    width: 330px;
+    height:220px;
+    border-radius: 12px;
 }
 /*  */
 .blog-content{
@@ -662,6 +693,7 @@ main{
     background: #FFFFFF14;
     border: none;
     outline: none;
+    border-radius: 10px;
     font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     line-height: 30px;
@@ -670,6 +702,7 @@ main{
     width: 380px;
     height: 100px;
     background: #F19C1B;
+    border-radius: 10px;
     font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     line-height: 30px;
@@ -703,16 +736,16 @@ footer{
     align-items: flex-start;
     gap: 15px;
 }
-.footer-section h1{
+.footer-section h2{
     color: #fff;
     font-family: 'DM Sans', sans-serif;
-    font-size: 35px;
+    font-size: 24px;
     line-height: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 .footer-section a{
     font-family: 'DM Sans', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     color: #FFFFFF73;
 }
@@ -816,6 +849,12 @@ footer{
         align-items: center;
         justify-content: center;
         gap: 70px;
+    }
+    .blogs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .blog-container {
         display: flex;
